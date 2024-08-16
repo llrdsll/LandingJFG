@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .video-background {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .video-background.video-large {
+            height: 1080px;
+        }
+
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-background a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 2;
+        }
+
+        #image1 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('coco.png') no-repeat center center;
+            background-size: cover;
+            cursor: pointer;
+            height: 100vh;
+        }
+
+        #image1 .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .video-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        #faq {
+            padding: 50px;
+            background: #EF5C31; /* Cor de fundo atualizada */
+        }
+
+        #faq h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #fff;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: background 0.3s, border-left-color 0.3s;
+            cursor: pointer;
+        }
+
+        .faq-item h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #EF5C31; /* Título em laranja */
+        }
+
+        .faq-item p {
+            display: none;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #fff; /* Respostas em branco */
+            line-height: 1.6;
+            transition: color 0.3s;
+        }
+
+        .faq-item.active {
+            background: #000; /* Fundo preto ao clicar */
+            border-left-color: #EF5C31;
+        }
+
+        .faq-item.active h3 {
+            color: #EF5C31; /* Título continua laranja */
+        }
+
+        .faq-item.active p {
+            display: block;
+            color: #fff; /* Resposta branca quando ativa */
+        }
+
+        .faq-item:hover {
+            background: #333; /* Fundo cinza escuro ao passar o mouse */
+            border-left-color: #EF5C31;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .video-background video {
+                display: none;
+            }
+            .video-background.mobile video {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="video3" class="video-background video-large">
+        <a href="https://link3.com"></a>
+        <video class="desktop" src="dois.mp4" autoplay muted loop></video>
+        <video class="mobile" src="video2_2_mobile.mp4" autoplay muted loop></video>
+    </section>
+    
+    <section id="image1">
+        <video class="background-video" src="coco.mp4" autoplay muted loop></video>
+        <div class="video-container">
+            <iframe width="900" height="506" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    <section id="video3" class="video-background video-large">
+        <a href="https://link3.com"></a>
+        <video class="desktop" src="dois1.mp4" autoplay muted loop></video>
+        <video class="mobile" src="video2_2_mobile.mp4" autoplay muted loop></video>
+    </section>
+    
+    <section id="faq">
+        <h2>Dúvidas Frequentes</h2>
+        <div class="faq-item">
+            <h3>Por que é importante fazer os pedidos com antecedência na JFG Metais?</h3>
+            <p>Na JFG Metais, dependemos de insumos de fornecedores como a Gerdau. Para garantir a entrega rápida e dentro do prazo, solicitamos que nossos clientes façam seus pedidos com antecedência. Isso nos permite programar a produção e assegurar a disponibilidade dos materiais necessários.</p>
+        </div>
+        <div class="faq-item">
+            <h3>As peças comercializadas pela JFG Metais possuem algum tipo de garantia de qualidade?</h3>
+            <p>Sim, todas as peças comercializadas pela JFG Metais possuem laudo técnico, que assegura a eficácia dos projetos, especialmente quando utilizadas com as buchas Fischer. Isso garante a qualidade e segurança das nossas soluções.</p>
+        </div>
+        <div class="faq-item">
+            <h3>A JFG Metais oferece suporte para projetos personalizados?</h3>
+            <p>Sim, produzimos peças personalizadas para atender às necessidades específicas de cada projeto. Trabalhamos em conjunto com nossos clientes para garantir que o suporte de metal seja exatamente o que o projeto exige.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Quem são os principais clientes da JFG Metais?</h3>
+            <p>Atendemos uma variedade de clientes, incluindo pessoas físicas, marmorarias e construtoras. Independentemente do tamanho do projeto, estamos prontos para fornecer soluções de qualidade.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Como a JFG Metais está evoluindo para atender melhor seus clientes?</h3>
+            <p>Estamos em constante evolução e valorizamos muito o feedback dos nossos clientes. Nos últimos meses, temos trabalhado para melhorar nossos processos e serviços, sempre com o objetivo de atender cada vez melhor as necessidades do mercado.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Quem é @_andre2k e como ele pode te ajudar?</h3>
+            <p>Eu sou André D. Santos (@_andre2k), responsável pelos serviços de UX/UI na JFG Metais. Meu trabalho envolve toda a parte de divulgação, marketing digital e também a parte comercial, além de fazer algumas entreguinhas para conhecer vocês. Se precisar de algo relacionado a esses temas, sinta-se à vontade para me chamar no Instagram @_andre2k ou pelo link abaixo. Estou aqui para ajudar!</p>
+        </div>
+        <!-- Adicione mais perguntas conforme necessário -->
+    </section>
+
+    <footer>
+        <p>© 2024 JFG Metais. Todos os direitos reservados a @_andre2k.</p>
+    </footer>
+
+    <script>
+        // Detecta se o dispositivo é móvel e altera os vídeos
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.innerWidth <= 768) {
+                var videos = document.querySelectorAll('.desktop');
+                videos.forEach(function(video) {
+                    video.style.display = 'none';
+                });
+                var mobileVideos = document.querySelectorAll('.mobile');
+                mobileVideos.forEach(function(video) {
+                    video.style.display = 'block';
+                });
+            }
+
+            // FAQ Toggle
+            var faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(function(item) {
+                item.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
