@@ -62,16 +62,28 @@
             z-index: 0;
         }
 
-       .video-container {
-            position: relative;
-            z-index: 1;
+        #image1 .video-desktop, #image1 .video-mobile {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 900px;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #image1 .video-desktop {
+            display: block;
+            object-fit: cover;
+        }
+
+        #image1 .video-mobile {
+            display: none;
+            object-fit: contain; /* Vídeo na horizontal no desktop, vertical no mobile */
         }
 
         #faq {
             padding: 50px;
-            background: #fc7334; /* Cor de fundo atualizada */
+            background: #EF5C31; /* Cor de fundo atualizada */
         }
 
         #faq h2 {
@@ -140,6 +152,17 @@
             .video-background.mobile video {
                 display: block;
             }
+            #image1 {
+                background-color: #EF5C31; /* Alterando fundo para a cor #fc7334 no celular */
+                background-image: none; /* Removendo a imagem de fundo no celular */
+            }
+            #image1 .video-desktop {
+                display: none; /* Ocultar vídeo desktop no mobile */
+            }
+            #image1 .video-mobile {
+                display: block; /* Mostrar vídeo mobile no mobile */
+                object-fit: contain; /* Vídeo na horizontal no desktop, vertical no mobile */
+            }
         }
     </style>
 </head>
@@ -151,10 +174,8 @@
     </section>
     
     <section id="image1">
-        <video class="background-video" src="coco.mp4" autoplay muted loop></video>
-        <div class="video-container">
-            <iframe width="900" height="506" src="https://www.youtube.com/embed/qBIq9YFgthY?si=e7pA388DqWBua8Ne" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        <video class="video-desktop" controls poster="desk.jpg" src="desk.mp4"></video>
+        <video class="video-mobile" controls poster="thumbnail-mobile.jpg" src="mobi.mp4"></video>
     </section>
     
     <section id="video3" class="video-background video-large">
@@ -193,7 +214,7 @@
     </section>
 
     <footer>
-        <p>© 2024 JFG Metais. Todos os direitos reservados a @_andre2k.</p>
+        <p>© 2024 JFG Metais. Todos os direitos reservados a @_andre2k. Visite nosso site em <a href="https://www.jfgmetais.com.br">www.jfgmetais.com.br</a>.</p>
     </footer>
 
     <script>
